@@ -27,26 +27,68 @@ public class Usuario {
 	}
 
 	public Integer recebeInteiro(String texto) {
-		return Integer.parseInt(JOptionPane.showInputDialog(texto));
+		try {
+			return Integer.parseInt(JOptionPane.showInputDialog(texto));
+		} catch (Exception e) {
+			// TODO: handle exception
+			exibeMsg("Entrada inválida");
+		}
+		return null;
+		
 	}
 
 	public Long recebeLong(String texto) {
-		return Long.parseLong(JOptionPane.showInputDialog(texto));
+		try {
+			String resposta = JOptionPane.showInputDialog(texto);
+			Long respostaConvertida = Long.parseLong(resposta);
+			return respostaConvertida;
+		} catch (Exception e) {
+			exibeMsg("Entrada inválida!");
+		}
+		return null;
 	}
 
 	public Double recebeDouble(String texto) {
-		return Double.parseDouble(JOptionPane.showInputDialog(texto));
+		try {
+			String resposta = JOptionPane.showInputDialog(texto);
+			Double respostaConvertida = Double.parseDouble(resposta);
+			return respostaConvertida;
+		} catch (Exception e) {
+			exibeMsg("Entrada inválida!");
+		}
+		return null;
 	}
 
 	public Float recebeFloat(String texto) {
-		return Float.parseFloat(JOptionPane.showInputDialog(texto));
+		try {
+			return Float.parseFloat(JOptionPane.showInputDialog(texto));
+		} catch (Exception e) {
+			// TODO: handle exception
+			exibeMsg("Entrada inválida!");
+		}
+		return null;
+		
 	}
 
 	public Boolean recebeBoolean(String texto) {
-		return Boolean.parseBoolean(JOptionPane.showInputDialog(texto));
+		try {
+			return Boolean.parseBoolean(JOptionPane.showInputDialog(texto));
+		} catch (Exception e) {
+			// TODO: handle exception
+			exibeMsg("Entrada inválida!");
+		}
+		return null;
+		
 	}
 
 	public String recebeTexto(String texto) {
-		return JOptionPane.showInputDialog(texto);
+		try {
+			return JOptionPane.showInputDialog(texto);
+		} catch (Exception e) {
+			// TODO: handle exception
+			exibeMsg("Entrada inválida!");
+		}
+		return null;
+		
 	}
 }
